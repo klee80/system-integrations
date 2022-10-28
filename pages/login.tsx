@@ -28,7 +28,6 @@ const LoginPage = () => {
   const [ loading, setLoading ] = useState( false );
   const dispatch = useAppDispatch();
 
-
   const handleSuccess = async (credentialResponse: CredentialResponse) => {
 
     try {

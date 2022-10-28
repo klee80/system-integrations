@@ -38,8 +38,6 @@ const checkJWT = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
             return res.status(400).json({ message: 'There is no user with that ID' });
         }
 
-        console.log('miremos el user', user)
-
         // after verify the token generates a new one
         res.status(200).json({
             ok: true,
