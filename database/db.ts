@@ -31,6 +31,7 @@ export const connectToDatabase = async () => {
     await mongoose.disconnect();
   }
 
+  console.log('que estoy mandando en la conection', process.env.MONGODB_URL)
   await mongoose.connect(process.env.MONGODB_URL || '' );  
   mongoConnection.isConnected = 1;
 
