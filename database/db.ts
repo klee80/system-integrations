@@ -31,11 +31,11 @@ export const connectToDatabase = async () => {
     await mongoose.disconnect();
   }
 
-  console.log('que estoy mandando en la conection', process.env.MONGODB_URL)
-  await mongoose.connect(process.env.MONGODB_URL || '' );  
+  console.log('que estoy mandando en la conection', process.env.NEXT_PUBLIC_MONGODB_URL)
+  await mongoose.connect(process.env.NEXT_PUBLIC_MONGODB_URL || '' );  
   mongoConnection.isConnected = 1;
 
-  console.log('Connected to MongoDB:', process.env.MONGODB_URL)
+  console.log('Connected to MongoDB:', process.env.NEXT_PUBLIC_MONGODB_URL)
 }
 
 
